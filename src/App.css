@@ -1,0 +1,17 @@
+.AiPowerSearch {
+    gap: 8px;
+    angle: 0 deg;
+    opacity: 1;
+    border-right-width: 1px;
+    padding: 10px 16px;
+    border-radius: 30px;
+    left: 50%px;
+    bottom: 50px;
+    background: #1632CD;
+    box-shadow: 0px 0px 30px 1px #F2F4FC80;
+    position: fixed;
+    color: white;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+}

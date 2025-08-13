@@ -1,0 +1,22 @@
+.desktop-img {
+    display: block;
+    width: 100%;
+}
+.mobile-img {
+    display: none;
+    width: 100%;
+}
+
+@media (max-width: 768px) {
+    .desktop-img {
+        display: none;
+    }
+    .mobile-img {
+        display: block;
+    }
+}
+.eShop {
+    display: flex;
+    justify-content: center;
+    position: relative;
+}
