@@ -193,6 +193,7 @@ nav {
         top: 10px;
         left: 20px;
         transform: none;
+        filter: brightness(0) invert(1);
     }
 
     .overlayArrow {
@@ -202,8 +203,42 @@ nav {
     .closeBtn {
         position: absolute;
         top: 10px;
-        right: 20px;
+        right: 30px;
         transform: none;
+    }
+    .textBubble {
+        width: 334px;
+        min-height: 96px;
+        max-height: 168px;
+        border-radius: 10px;
+        border-width: 1px;
+        padding: 16px;
+        gap: 12px;
+        margin-bottom: 20px;
+
+    }
+    .textBubble textarea {
+        max-height: 130px;
+    }
+    .col {
+        align-items: center;
+    }
+    .colText {
+        width: 334px;
+        height: 163px;
+        gap: 48px;
+        angle: 0 deg;
+        opacity: 1;
+    }
+    .colItemsContainer {
+        flex-wrap: nowrap;
+        overflow: auto;
+        width: 100vw;
+    }
+    .colItem {
+        height: fit-content;
+        width: fit-content;
+        white-space: nowrap;
     }
 }
 
