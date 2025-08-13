@@ -94,7 +94,6 @@ nav {
 .textBubble {
     display: flex;
     gap: 12px;
-    padding: 16px;
     border: 1px solid #FCFCFC;
     border-radius: 10px;
     background-color: #DEE3FF;
@@ -106,18 +105,27 @@ nav {
     align-items: flex-start;
     transition: box-shadow 0.2s ease;
     position: relative;
-    overflow-y: hidden;
+    overflow: hidden;
+    padding: 10px;
+    box-sizing: border-box;
 }
 
-.textBubble.has-shadow::before {
+
+.textBubble::before {
     content: "";
     position: absolute;
     top: 0;
     left: 0;
     right: 0;
-    height: 20px;
-    background: linear-gradient(to bottom, rgba(255, 255, 255, 0.6), transparent);
+    height: 50px;
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 0.9), transparent);
     pointer-events: none;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.textBubble.has-shadow::before {
+    opacity: 1;
 }
 
 .textBubble:focus-within {
@@ -137,6 +145,7 @@ nav {
     overflow-wrap: break-word;
     word-break: break-word;
     overflow: hidden;
+    max-height: 175px;
 }
 
 .textBubble textarea::placeholder {
@@ -162,6 +171,9 @@ nav {
 }
 .poweredBy {
     cursor: pointer;
+}
+.bottomContent {
+    padding: 10px;
 }
 
 
