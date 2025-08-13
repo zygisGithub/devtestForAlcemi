@@ -8,11 +8,11 @@ const Bottom = () => {
     const handleChange = (e) => {
         const textarea = textareaRef.current;
         if (textarea) {
-            textarea.style.height = 'auto'; // reset height to recalc
-            const newHeight = Math.min(textarea.scrollHeight, 200); // max 200px
+            textarea.style.height = 'auto';
+            const newHeight = Math.min(textarea.scrollHeight, 200);
             textarea.style.height = `${newHeight}px`;
 
-            setOverflow(newHeight > 120); // optional for shadow
+            setOverflow(newHeight >= 200);
         }
 
         setText(e.target.value);
@@ -24,9 +24,10 @@ const Bottom = () => {
             textarea.style.height = 'auto';
             const newHeight = Math.min(textarea.scrollHeight, 200);
             textarea.style.height = `${newHeight}px`;
-            setOverflow(newHeight > 120);
+            setOverflow(newHeight >= 200);
         }
     }, [text]);
+
 
 
     return (

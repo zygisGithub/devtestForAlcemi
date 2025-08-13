@@ -21,7 +21,7 @@
     display: flex;
     flex-direction: column;
     height: 100%;
-    justify-content: space-around;
+    justify-content: space-between;
 }
 .lightBlanket {
     background: #00000080;
@@ -85,9 +85,8 @@ nav {
 .bottom {
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: end;
     align-items: center;
-    padding: 16px;
     flex: 1;
 }
 
@@ -118,10 +117,10 @@ nav {
     left: 0;
     right: 0;
     height: 50px;
-    background: linear-gradient(to bottom, rgba(255, 255, 255, 0.9), transparent);
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 0.5), transparent);
     pointer-events: none;
     opacity: 0;
-    transition: opacity 0.3s ease;
+    transition: opacity 0.6s ease;
 }
 
 .textBubble.has-shadow::before {
@@ -133,6 +132,7 @@ nav {
 }
 
 .textBubble textarea {
+    font-family: 'Satoshi', sans-serif;
     flex: 1;
     background: transparent;
     border: none;
@@ -142,10 +142,13 @@ nav {
     resize: none;
     line-height: 1.4;
     height: 100%;
-    overflow-wrap: break-word;
-    word-break: break-word;
-    overflow: hidden;
+    overflow-y: auto;
+    overflow-x: hidden;
     max-height: 175px;
+    scrollbar-width: none;
+}
+.textBubble textarea::-webkit-scrollbar {
+    display: none;
 }
 
 .textBubble textarea::placeholder {
@@ -172,9 +175,38 @@ nav {
 .poweredBy {
     cursor: pointer;
 }
-.bottomContent {
-    padding: 10px;
+
+@media (max-width: 768px) {
+    .alcemiOverlay {
+        width: 100vw;
+        height: 100vh;
+        top: 0;
+        left: 0;
+        transform: none;
+        border-radius: 0;
+        border: none;
+        padding: 10px;
+    }
+
+    .poweredBy {
+        position: absolute;
+        top: 10px;
+        left: 20px;
+        transform: none;
+    }
+
+    .overlayArrow {
+        display: none;
+    }
+
+    .closeBtn {
+        position: absolute;
+        top: 10px;
+        right: 20px;
+        transform: none;
+    }
 }
+
 
 
 
